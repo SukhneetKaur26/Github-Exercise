@@ -9,4 +9,10 @@ public class CalculatorTest {
         Addition addition = new Addition();
         assertEquals(10.0, addition.add(6.0, 4.0));
     }
+
+    @Test
+    public void testSubtraction() {
+        Subtraction subtraction = new Subtraction();
+        assertEquals(2.0, subtraction.subtract(6.0, 4.0));
+    }
 }

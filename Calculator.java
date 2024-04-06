@@ -42,12 +42,31 @@ public class Calculator {
         double result = addition.add(num1, num2);
         System.out.println("Result: " + result);
 
-        scanner.close();
+
     
 
 
 class Addition {
     public double add(double num1, double num2) {
         return num1 + num2;
+    }
+}
+
+        Subtraction subtraction = new Subtraction();
+
+        System.out.println("Welcome to Calculator!");
+        System.out.println("Enter two numbers to subtract:");
+        double num1 = scanner.nextDouble();
+        double num2 = scanner.nextDouble();
+        double result = subtraction.subtract(num1, num2);
+        System.out.println("Result: " + result);
+
+        scanner.close();
+    }
+}
+
+class Subtraction {
+    public double subtract(double num1, double num2) {
+        return num1 - num2;
     }
 }
