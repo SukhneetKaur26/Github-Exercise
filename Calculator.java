@@ -1,4 +1,3 @@
-// Calculator.java
 import java.util.Scanner;
 
 public class Calculator {
@@ -12,56 +11,53 @@ public class Calculator {
         System.out.println("3. Multiplication");
 
         int choice = scanner.nextInt();
+        double result = 0.0;
         switch (choice) {
             case 1:
                 Addition addition = new Addition();
-                addition.performOperation();
+                result = addition.performOperation(scanner);
                 break;
             case 2:
                 Subtraction subtraction = new Subtraction();
-                subtraction.performOperation();
+                result = subtraction.performOperation(scanner);
                 break;
             case 3:
                 Multiplication multiplication = new Multiplication();
-                multiplication.performOperation();
+                result = multiplication.performOperation(scanner);
                 break;
             default:
                 System.out.println("Invalid choice!");
         }
+
+        System.out.println("Result: " + result);
 
         scanner.close();
     }
 }
 
 class Addition {
-    public void performOperation() {
-        Scanner scanner = new Scanner(System.in);
+    public double performOperation(Scanner scanner) {
         System.out.println("Enter two numbers to add:");
         double num1 = scanner.nextDouble();
         double num2 = scanner.nextDouble();
-        double result = num1 + num2;
-        System.out.println("Result: " + result);
+        return num1 + num2;
     }
 }
 
 class Subtraction {
-    public void performOperation() {
-        Scanner scanner = new Scanner(System.in);
+    public double performOperation(Scanner scanner) {
         System.out.println("Enter two numbers to subtract:");
         double num1 = scanner.nextDouble();
         double num2 = scanner.nextDouble();
-        double result = num1 - num2;
-        System.out.println("Result: " + result);
+        return num1 - num2;
     }
 }
 
 class Multiplication {
-    public void performOperation() {
-        Scanner scanner = new Scanner(System.in);
+    public double performOperation(Scanner scanner) {
         System.out.println("Enter two numbers to multiply:");
         double num1 = scanner.nextDouble();
         double num2 = scanner.nextDouble();
-        double result = num1 * num2;
-        System.out.println("Result: " + result);
+        return num1 * num2;
     }
 }
