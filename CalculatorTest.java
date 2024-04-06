@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.util.Scanner; 
+import java.util.Scanner; // add inline comment
 
 public class CalculatorTest {
 
