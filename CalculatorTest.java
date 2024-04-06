@@ -15,4 +15,10 @@ public class CalculatorTest {
         Subtraction subtraction = new Subtraction();
         assertEquals(2.0, subtraction.subtract(6.0, 4.0));
     }
+
+    @Test
+    public void testMultiplication() {
+        Multiplication multiplication = new Multiplication();
+        assertEquals(24.0, multiplication.multiply(6.0, 4.0));
+    }
 }
